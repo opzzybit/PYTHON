@@ -54,10 +54,10 @@ string_menu = """
 =====================================
 """
 print(string_menu) 
-option = int(input("Enter your option: "))
+option = input("Enter your option: ")
 
 match option:
-    case 1:
+    case "1":
         profile = """
  ========PROFILE========
 
@@ -73,10 +73,10 @@ match option:
 5. Customize
 """
         print(profile)
-        phone_profile = int(input("Enter your option: "))
+        phone_profile = input("Enter your option: ")
 
         match phone_profile:
-            case 1:
+            case "1":
                 general_mode = """
       GENERAL MODE
     
@@ -86,7 +86,7 @@ match option:
                 print(general_mode)
 
         match phone_profile:
-            case 2:
+            case "2":
                 silent = """
       SILENT MODE
     
@@ -96,7 +96,7 @@ match option:
                 print(silent)
 
         match phone_profile:
-            case 3:
+            case "3":
                 meeting = """
       MEETING MODE
     
@@ -106,7 +106,7 @@ match option:
                 print(meeting)
 
         match phone_profile:
-            case 4:
+            case "4":
                 outdoor = """
       OUTDOOR MODE
     
@@ -116,7 +116,7 @@ match option:
                 print(outdoor)
 
         match phone_profile:
-            case 5:
+            case "5":
                 customize = """
       CUSTOMIZE YOUR VOLUME
     
@@ -130,21 +130,21 @@ match option:
 4. Reduce Keyboard volume
 """
                 print(customize)
-                customize_volume = int(input("Enter your option: "))
+                customize_volume = input("Enter your option: ")
 
-                if customize_volume == 1:
+                if customize_volume == "1":
                     print("RINGTONE VOLUME INCREASED  !!!!!!")
-                if customize_volume == 2:
+                if customize_volume == "2":
                     print("KEYBOARD VOLUME INCREASED !!!!!!!")
-                if customize_volume == 3:
+                if customize_volume == "3":
                     print("RINGTONE VOLUME REDUCED !!!!!!!")
-                if customize_volume == 4:
+                if customize_volume == "4":
                     print("KEYBOARD VOLUME REDUCED !!!!!!! ")
-                if customize_volume >= 5:
+                if customize_volume >= "5":
                     print("OPTION NOT FOUND  ")
 
 match option:
-    case 2:
+    case "2":
         phone_book = """
 ========PHONE BOOK========
 
@@ -159,10 +159,10 @@ match option:
 5. Option 
 """
         print(phone_book)
-        book_page = int(input("Enter your option: "))
+        book_page = input("Enter your option: ")
 
         match book_page:
-            case 1:
+            case "1":
                 search = """
            SEARCH
 abc....                        
@@ -178,11 +178,15 @@ Enter the name : ...................
             
                 book_page3 = input("Enter done: ")     
                 print()
-                print("searching ! searching ! searching !!!!!!")
+                
                 book_page2 += searched_name
-
+                
+                print()
+                print(book_page2 )
+                print("searching ! searching ! searching !!!!!!")
+        
         match book_page:
-            case 2:
+            case "2":
                 add_name = """
            ADD NAME 
 abc....                        
@@ -195,17 +199,21 @@ Enter the name : .................
 Enter phone number :.. ...............   
   """
                 print(add_name)
-                note_page1 = str(input("Enter the name: "))
+                note_page1 = input("Enter the name: ")
                    
-                note_page2 = str(input("Enter the number: "))
+                note_page2 = input("Enter the number: ")
 
-                note_page1 += note_page1_input 
+                note_page1 += note_page1_input
                 note_page2 += note_page2_input 
+                
+                print()
+                print(note_page1)
+                print(note_page2)
                 print()
                 print("CONTACT SAVED")
 
         match book_page:
-            case 3:
+            case "3":
                 delete ="""
            DELETE                        
   
@@ -216,7 +224,7 @@ Enter phone number :.. ...............
   """
                 print(delete)
         match book_page:
-            case 4:
+            case "4":
                 copy_number = """
          COPY NUMBER                         
   
@@ -227,7 +235,7 @@ Enter phone number :.. ...............
   """
                 print(copy_number)
         match book_page:
-            case 5:
+            case "5":
                 settings = """
            SETTINGS 
 1. Memory status 
@@ -239,10 +247,10 @@ Enter phone number :.. ...............
 0. Back  
   """
                 print (settings)
-                book_settings = int(input("Enter your option: "))
+                book_settings = input("Enter your option: ")
 
                 match book_settings:
-                            case 1:
+                            case "1":
                                 memory = """
                      MEMORY SPECIFICATIONS
 
@@ -262,7 +270,7 @@ Enter phone number :.. ...............
                                 print(memory)
 
                 match book_settings:
-                            case 2:
+                            case "2":
                                 display = """
                         DISPLAY SPECIFIAATIONS
 
@@ -283,7 +291,7 @@ Enter phone number :.. ...............
     """
                                 print(display)                         
                 match book_settings:
-                            case 1:
+                            case "1":
                                 data_speed = """
                    NETWORK & DATA SPEED 
     • 2G Mobile Data: No GPRS or EDGE support. It relies on CSD (Circuit-Switched Data)
@@ -305,7 +313,7 @@ Enter phone number :.. ...............
                                 print( data_speed)
 
 match option:
-    case 3:
+    case "3":
         call_register = """
     ========CALL REGISTER========
     
@@ -320,19 +328,19 @@ match option:
 """
         print(call_register)
         print()
-        register = int(input("Enter your option: "))
+        register = input("Enter your option: ")
 
-        if register == 1:
+        if register == "1":
             print("EMPTY CONTACT !!!!!!!")
-        if register == 2:
+        if register == "2":
             print("EMPTY CONTACT!!!!!!")
-        if register == 3:
+        if register == "3":
             print("EMPTY CONTACT !!!!!!");
-        if register == 0:
-            print("back !!! formulation")
+        if register == "0":
+            print("back !!! ")
 
 match option:
-    case 4:
+    case "4":
         chat = """
    ========CHAT========     
    
@@ -346,7 +354,7 @@ match option:
         print(chat)
 
 match option:
-    case 5:
+    case "5":
         message = """
   ========MESSAGE========    
 
@@ -364,24 +372,24 @@ match option:
 6. Picture message 
 """
         print(message)
-        phone_message = int(input("Enter your option: "))
+        phone_message = input("Enter your option: ")
         print()
 
-        if phone_message == 1:
+        if phone_message == "1":
             print("NO SIM TO MOVE FURTHER !!!!!!!")
-        if phone_message == 2:
+        if phone_message == "2":
             print("EMPTY INBOX !!!!!!!!")
-        if phone_message == 3:
+        if phone_message == "3":
             print("EMPTY OUTBOX !!!!!!!!")
-        if phone_message == 4:
+        if phone_message == "4":
             print("NO ITEM UNTIL THERE IS SIM !!!!!!!!!!!")
-        if phone_message == 5:
+        if phone_message == "5":
             print("EMPTY DRAFT  !!!!!!")
-        if phone_message >= 6:
+        if phone_message >= "6":
             print("NO PICTURE MESSAGE YET  !!!!!!")
 
 match option:
-    case 6:
+    case "6":
         call_divert = """
  =============CALL DIVERT============    
 
@@ -397,24 +405,24 @@ match option:
 5. cancel all divert
 """
         print(call_divert)
-        divert = int(input("Enter your option: "))
+        divert = input("Enter your option: ")
         print()
 
-        if divert == 1:
+        if divert == "1":
             print("NO SIM TO MOVE FURTHER !!!!!!!")
-        if divert == 2:
+        if divert == "2":
             print("EMPTY SIM CASE")
-        if divert == 3:
+        if divert == "3":
             print("NO SIM FOUND ")
-        if divert == 4:
+        if divert == "4":
             print("NO SIM FOUND")
-        if divert == 5:
+        if divert == "5":
             print("EMPTY DIVERT !!!!!!");
-        if divert >= 6:
+        if divert >= "6":
             print("OPTION NOT FOUND")
 
 match option:
-    case 7:
+    case "7":
         settings = """
 =============SETTINGS============
 
@@ -428,10 +436,10 @@ match option:
 4. Restore factory settings 
 """
         print(settings)
-        device_settings = int(input("Enter your option: "))
+        device_settings = input("Enter your option: ")
 
         match device_settings:
-            case 1:
+            case "1":
                 calls_settings = """
        CALL  SETTING
    
@@ -442,20 +450,20 @@ match option:
   3. Speed dialing
 """
                 print(calls_settings)
-                setting_input = int(input("Enter your option: "))
+                setting_input = input("Enter your option: ")
                 print()
 
-                if setting_input == 1:
+                if setting_input == "1":
                     print("AUTOMATIC REDIAL ACTIVATED !!!!!!!")
-                if setting_input == 2:
+                if setting_input == "2":
                     print("EMPTY CALL TAKEN")
-                if setting_input == 3:
+                if setting_input == "3":
                     print("SPEED DIALING ACTIVATED")
-                if setting_input >= 4:
+                if setting_input >= "4":
                     print("NO SIM FOUND")
 
         match device_settings:
-            case 2:
+            case "2":
                 phone_settings = """
        CALL  SETTING
    
@@ -468,9 +476,9 @@ match option:
   4. Welcome note
 """
                 print(phone_settings)
-                setting_in = int(input("Enter your option: "))
+                setting_in = input("Enter your option: ")
 
-                if setting_in == 1:
+                if setting_in == "1":
                     print()
                     print("""
                     
@@ -487,27 +495,27 @@ match option:
  
 5. Chinese 
 """ )                  
-                    language = int(input("""Enter your option: """))
+                    language = input("""Enter your option: """)
 
                     print()
-                    if language == 1:
+                    if language == "1":
                         print("LANGUAGE CHANGED TO ENGLISH !!!!!!!")
-                    if language == 2:
+                    if language == "2":
                         print("LANGUAGE CHANGED TO ARABIC")
-                    if language == 3:
+                    if language == "3":
                         print("LANGUAGE CHANGED TO SPANISH")
-                    if language == 4:
+                    if language == "4":
                         print("LANGUAGE CHANGED TO JAPANESE")
-                    if language == 5:
+                    if language == "5":
                         print("LANGUAGE CHANGED TO CHINESE")
-                    if language >= 6:
+                    if language >= "6":
                         print("OPTION NOT FOUND")
 
-                if setting_in == 2:
+                if setting_in == "2":
                     print()
                     print("NO SIM FOUND YET. INSERT A SIM")
 
-                if setting_in == 3:
+                if setting_in == "3":
                     print()
                     print("""
              NETWORK  SELECTION
@@ -520,7 +528,7 @@ DEFAULT : [NONE]
   
 """)
 
-                if setting_in == 4:
+                if setting_in == "4":
                     print()
                     print("""
 Welcome to Nokia 5510. It is actually the best phone
@@ -532,23 +540,23 @@ possible desires, pleasure , and imaginations
 Thank you for choosing this product !!!!!!.
 """)
 
-                if setting_in >= 5:
+                if setting_in >= "5":
                     print()
                     print("OPTION NOT FOUND")
 
         match device_settings:
-            case 3:
+            case "3":
                 security_settings = """
        SECURITY  SETTINGS
   
      RESET PASSWORD  
 """
                 print(security_settings)
-                reset_password = int(input("Enter your option: "))
+                reset_password = input("Enter your newpassword: ")
                 user_password += reset_password
 
         match device_settings:
-            case 4:
+            case "4":
                 restore_setting = """
   
        RESETTING YOU PHONE !方位! 
@@ -558,7 +566,7 @@ Thank you for choosing this product !!!!!!.
                 print(restore_setting)
 
 match option:
-    case 8:
+    case "8":
         calculator = """
  =========OPZZY BIT  CALCULATOR=======
 
@@ -581,11 +589,11 @@ SECOND NUMBER--
 """
         print(calculator)
 
-        number1 = int(input("Enter first number: "))
+        number1 = int(float(input("Enter first number: ")))
         print()
         operator = input("Enter Operator: ")[0]
         print()
-        number2 = int(input("Enter second number: "))
+        number2 = int(float(input("Enter second number: ")))
 
         print()   
         match operator:
@@ -616,7 +624,7 @@ SECOND NUMBER--
                 print()
 
 match option:
-    case 10:
+    case "10":
         music = """
  ========MUSICS======== 
 
@@ -628,10 +636,10 @@ match option:
 3. track list
 """
         print(music)
-        music_tracks = int(input("Enter music list of your choice: "))
+        music_tracks = input("Enter music list of your choice: ")
 
         match music_tracks:
-            case 1:
+            case "1":
                 recorder = """ 
  =====Recorder=====
         
@@ -640,7 +648,7 @@ match option:
                 print(recorder)
 
         match music_tracks:
-            case 2:
+            case "2":
                 radio = """
      ====Radio====
   
@@ -653,7 +661,7 @@ match option:
                 print(radio)
 
         match music_tracks:
-            case 3:
+            case "3":
                 track_list = """
  ===Track list===
 
@@ -662,7 +670,7 @@ match option:
                 print(track_list)
 
 match option:
-    case 9:
+    case "9":
         game_menu = """
 ===============WELCOME TO GAME STATION=================
         
@@ -676,10 +684,10 @@ match option:
 3. Quiz
 """
         print(game_menu)
-        game = int(input("Enter game of your choice: "))
+        game = input("Enter game of your choice: ")
 
         match game:
-            case 1:
+            case "1":
                 snake_game = """
 ============WELCOME TO SNAKE GAME====================== 
           
@@ -692,19 +700,19 @@ match option:
 3. Hard
 """
                 print(snake_game)
-                game_level = int(input("Enter game level: "))
+                game_level = input("Enter game level: ")
 
-                if game_level == 1:
+                if game_level == "1":
                     print("Easy mode,here we go !!!!!!!")
-                if game_level == 2:
+                if game_level == "2":
                     print("Normal mode, is getting interesting !!!!!!");
-                if game_level == 3:
+                if game_level == "3":
                     print("Hard mode, you can do this  !!!!!!")
-                if game_level >= 4:
+                if game_level >= "4":
                     print("level not found !!!!!!");
 
         match game:
-            case 2:
+            case "2":
                 bounce_ball_game = """ 
 ===========WELCOME TO BOUNCE BALL GAME================
         
@@ -718,19 +726,19 @@ match option:
 3. Level three 
 """
                 print(bounce_ball_game)
-                game_level = int(input("Enter game level: "))
+                game_level = input("Enter game level: ")
 
-                if game_level == 1:
+                if game_level == "1":
                     print("it's just getting started !!!!!!!")
-                if game_level == 2:
+                if game_level == "2":
                     print("now it's getting interesting !!!!!!");
-                if game_level == 3:
+                if game_level == "3":
                     print("Let see how far you can go  !!!!!!")
-                if game_level >= 4:
+                if game_level >= "4":
                     print("hoops! level not found")
 
         match game:
-            case 3:
+            case "3":
                 quiz_game1 = """ 
 ===============QUIZ TIME !!!!!!==================
 
@@ -751,17 +759,17 @@ EYES WILL NOT PUSH US oooo.....
 3. 729
 """
                 print(quiz_game1)
-                answer1 = int(input("Enter your answer: "))
+                answer1 = input("Enter your answer: ")
 
-                if answer1 == 1:
+                if answer1 == "1":
                     print("Wrong !!,")
                     print("Correct answer: 729")
-                if answer1 == 2:
+                if answer1 == "2":
                     print("Wrong !!,")
                     print("Correct answer: 729")
-                if answer1 == 3:
+                if answer1 == "3":
                     print("CORRECT !!!!!!");
-                if answer1 >= 4:
+                if answer1 >= "4":
                     print("Option not found")
 
                 print()
@@ -777,17 +785,17 @@ EYES WILL NOT PUSH US oooo.....
 3. Treaty of Tordesillas
 """
                 print(quiz_game2)
-                answer2 = int(input("Enter your answer: "))
+                answer2 = input("Enter your answer: ")
 
-                if answer2 == 1:
+                if answer2 == "1":
                     print("Wrong !!,")
                     print("Correct is answer: Treaty of Westphalia")
-                if answer2 == 2:
+                if answer2 == "2":
                     print("CORRECT !!!!!!");
-                if answer2 == 3:
+                if answer2 == "3":
                     print("Wrong !!,")
                     print("Correct is answer: Treaty of Westphalia")
-                if answer2 >= 4:
+                if answer2 >= "4":
                     print("Option not found")
 
                 print()
@@ -806,17 +814,17 @@ What unique design feature defines the physical appearance of the Nokia 5510?
 4. A completely buttonless frame
 """
                 print(quiz_game3)
-                answer3 = int(input("Enter your answer: "))
+                answer3 = input("Enter your answer: ")
 
-                if answer3 == 1:
+                if answer3 == "1":
                     print("Wrong !!,")
                     print("Correct is answer: [2]")
-                if answer3 == 2:
+                if answer3 == "2":
                     print("CORRECT !!!!!!");
-                if answer3 == 3:
+                if answer3 == "3":
                     print("Wrong !!,")
                     print("Correct is answer: [2]")
-                if answer3 >= 4:
+                if answer3 >= "4":
                     print("Option not found")
 
                 print()
@@ -834,20 +842,20 @@ Borrowed from the classic Nokia 3310, what is the screen resolution of the Nokia
 4.  320 x 240 pixels
 """
                 print(quiz_game4)
-                answer4 = int(input("Enter your answer: "))
+                answer4 = input("Enter your answer: ")
 
-                if answer4 == 1:
+                if answer4 == "1":
                     print("CORRECT !!!!!!");
-                if answer4 == 2:
+                if answer4 == "2":
                     print("Wrong !!,")
                     print("Correct is answer: [1]")
-                if answer4 == 3:
+                if answer4 == "3":
                     print("Wrong !!,")
                     print("Correct is answer: [1]")
-                if answer4 == 4:
+                if answer4 == "4":
                     print("Wrong !!,")
                     print("Correct is answer: [1]")
-                if answer4 >= 5:
+                if answer4 >= "5":
                     print("Option not found")
 
                 print()
@@ -866,24 +874,24 @@ Borrowed from the classic Nokia 3310, what is the screen resolution of the Nokia
 4. 3G  U.M.T.S
 """
                 print(quiz_game5)
-                answer5 = int(input("Enter your answer: "))
+                answer5 = input("Enter your answer: ")
 
-                if answer5 == 1:
+                if answer5 == "1":
                     print("Wrong !!,")
                     print("Correct is answer: [2]")
-                if answer5 == 2:
+                if answer5 == "2":
                     print("CORRECT !!!!!!");
-                if answer5 == 3:
+                if answer5 == "3":
                     print("Wrong !!,")
                     print("Correct is answer: [2]")
-                if answer5 == 4:
+                if answer5 == "4":
                     print("Wrong !!,")
                     print("Correct is answer: [2]")
-                if answer5 >= 5:
+                if answer5 >= "5":
                     print("Option not found")
 
 match option:
-    case 14:
+    case "14":
         ringtones = """ 
 =======RING TONES========
 
@@ -911,40 +919,40 @@ match option:
 10.Toreador
 """
         print(ringtones)
-        ringtone = int(input("Enter option: "))
+        ringtone = input("Enter option: ")
 
         if ringtone == "1":
             print("Rhythmic, blue inspired upbeat tune ")
-                    print("RINGING.....RINGING......RINGING.......")
-                if ringtone == "2":
-                    print("A festive holiday jingle")
-                    print("RINGING.....RINGING......RINGING.......")
-                if ringtone == "3":
-                    print("A rhythmic percussive tape pattern")
-                    print("RINGING.....RINGING......RINGING.......")
-                if ringtone == "4":
-                    print(" A standard telephone ring stimulation ")
-                    print("RINGING.....RINGING......RINGING.......")
-                if ringtone == "5":
-                    print("classic excerpt from Mozart symphony NO.40  ")
-                    print("RINGING.....RINGING......RINGING.......")
-                if ringtone == "6":
-                    print(" Rising pitch sound effect")
-                    print("RINGING.....RINGING......RINGING.......")
-                if ringtone == "7":
-                    print("A light cheerful chime like tone")
-                    print("RINGING.....RINGING......RINGING.......")
-                if ringtone == "8":
-                    print("A fast clock ticking alert")
-                    print("RINGING.....RINGING......RINGING.......")
-                if ringtone == "9":
-                    print("A smooth relaxing walking tempo tune")
-                    print("RINGING.....RINGING......RINGING.......")
-                if ringtone == "10":
-                    print("A dramatic march melody from Carmel  ")
-                    print("RINGING.....RINGING......RINGING.......")
-                if ringtone >= "11":
-                    print("option not found")
+            print("RINGING.....RINGING......RINGING.......")
+        if ringtone == "2":
+            print("A festive holiday jingle")
+            print("RINGING.....RINGING......RINGING.......")
+        if ringtone == "3":
+            print("A rhythmic percussive tape pattern")
+            print("RINGING.....RINGING......RINGING.......")
+        if ringtone == "4":
+            print(" A standard telephone ring stimulation ")
+            print("RINGING.....RINGING......RINGING.......")
+        if ringtone == "5":
+            print("classic excerpt from Mozart symphony NO.40  ")
+            print("RINGING.....RINGING......RINGING.......")
+        if ringtone == "6":
+            print(" Rising pitch sound effect")
+            print("RINGING.....RINGING......RINGING.......")
+        if ringtone == "7":
+            print("A light cheerful chime like tone")
+            print("RINGING.....RINGING......RINGING.......")
+        if ringtone == "8":
+            print("A fast clock ticking alert")
+            print("RINGING.....RINGING......RINGING.......")
+        if ringtone == "9":
+            print("A smooth relaxing walking tempo tune")
+            print("RINGING.....RINGING......RINGING.......")
+        if ringtone == "10":
+            print("A dramatic march melody from Carmel  ")
+            print("RINGING.....RINGING......RINGING.......")
+        if ringtone >= "11":
+            print("option not found")
 
 match option:
     case "11":

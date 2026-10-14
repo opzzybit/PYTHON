@@ -84,10 +84,10 @@ def profile_menu (option):
                print(profile)
                phone_profile = input("Enter your option: ")
 
-            if phone_profile == "0":
+               if phone_profile == "0":
                     return profile_loop = False
                     break
-            if phone_profile == "00":
+               if phone_profile == "00":
                     return running = False
                     break
 def general_mode_menu(phoneprofile):                   
@@ -852,7 +852,7 @@ SECOND NUMBER--
                             print("hoops! level not found")
 
                 match game:
-                    case 3:
+                    case 3":
                         quiz_game1 = """ 
 ===============QUIZ TIME !!!!!!==================
 

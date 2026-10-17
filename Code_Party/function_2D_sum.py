@@ -5,7 +5,7 @@ def sum_of_two_dimensional_list(numbers):
   
     
     sum_up = [0,0,0]
-    for adder in numbers[0]:
+    for adder in numbers[0]s:
         sum_up[0] += adder
         result[0] = sum_up[0]
     

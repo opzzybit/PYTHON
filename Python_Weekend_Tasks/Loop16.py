@@ -19,12 +19,4 @@ for letter in ("semicolon"):
   elif letter == 'u':
      print(letter, end='  ')
      print(len(letter), end='  ')
-  
 
-
-
-
-
-
-
-print()

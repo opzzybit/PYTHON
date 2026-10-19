@@ -1,4 +1,4 @@
-def credit_card_confirmation(numbers):
+def credit_card_type_confirmation(numbers):
     
     if numbers[0] == 4:
        return " Visa Card"
@@ -11,7 +11,19 @@ def credit_card_confirmation(numbers):
     else:
         return "Not found"
 
-def card_calculator_validator_confirmation(numbers):
+def credit_card_length(numbers):
+  length_of_numbers = len(numbers)
+  return length_of_numbers
+
+def confirmation_of_credit_card_length(numbers):
+    if len(numbers) <= 16:
+        print()
+        return "Valid card length"
+    else : 
+        print()
+        return "Error Message: you exceeded the card limit (13 or 16 length)"
+
+def sum_of_card_card_second_digit_right_to_left(numbers):
     
     new_set_of_list = []
     sum_of_list = 0
@@ -61,7 +73,7 @@ def final_credit_card_confirmation(validations):
 
 
 print()
-print("hello!  Kindly Enter your card (digit) details to verify")
+print("hello!  Kindly Enter your card (digit) details to verify \n\t The Digit length must be between 13 and 16")
 print()
 
 result_list = []
@@ -75,17 +87,19 @@ while(True):
     else:
         print()
         print("Enter digit numbers, not letters or symbols")
-        
 
 for number in main_number_input:
     result_list.append(int(number))
 
 
-confirmation = credit_card_confirmation(result_list)
+type_confirmation = credit_card_type_confirmation(result_list)
 
-card_length = len(result_list)
+card_length = credit_card_length(result_list)
 
-multipled =  card_calculator_validator_confirmation(result_list)
+card_length_confirmation = confirmation_of_credit_card_length(result_list)
+
+
+multipled =  sum_of_card_card_second_digit_right_to_left(result_list)
 
 odd_numbers_sum = sum_of_credit_card_odd_numbers(result_list)
 
@@ -95,14 +109,16 @@ final_confirmation = final_credit_card_confirmation(sum_of_validators)
 
 
 validation_status = f"""
-==============================================================
-****Credit card Type: {confirmation} 
+======================================================================
+        {card_length_confirmation}
+
+****Credit card Type: {type_confirmation} 
 
 ****Credit card number: {main_number_input}
 
 ****Credit digit length: {card_length}
 
 ****Credit card validity status: {final_confirmation}
-==============================================================
+=======================================================================
 """
 print (validation_status)

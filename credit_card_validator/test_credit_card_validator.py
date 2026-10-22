@@ -2,7 +2,7 @@ import unittest
 
 from Credit_Card_Validator import *
 
-class TestCreditCard(unittest.TestCase):
+class Test_Credit_Card(unittest.TestCase):
 
 
     def test_visa_card(self):

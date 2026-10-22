@@ -240,23 +240,104 @@ print()
 words_list = ['level','world', 'madam', 'python']
 def reversing_the_word(words):
     palindrome = words[::-1]
+    return palindrome == words
     
-    new_numbers = ''
-    if palindrome == words :
-        new_numbers = words
-        
-    return new_numbers
+result = list(filter(reversing_the_word, words_list))
+print("sorted palindrome = ", result)
 
-result = list(map(reversing_the_word,words_list))
-print("sorted palindrome = ",result)
+
 
 
 #CAPITALIZING  THE FIRST LETTER 
-#print()
-#given_names = ['john', 'mary', 'steve']
-#def capitalizing_the_first_letter(words){
+print()
+given_names = ['john', 'mary', 'steve']
+def capitalizing_the_first_letter(words):
+    return words.capitalize()
+ 
+result = list(map(capitalizing_the_first_letter,given_names))
+print(f"converted first letter to uppercase = {result}")
+
+
+#CONVERTING ALL THE FIRST LETTER TO UPPERCASE
+print()
+given_strings = ['python', 'java', 'c++']
+def converting_the_first_letter_to_uppercase(words):
+    return words.capitalize()
+ 
+result = list(map(converting_the_first_letter_to_uppercase,given_strings))
+print(f"the first letter to uppercase = {result}")
 
 
 
+#SUM OF CORRESPONDING NUMBERS IN A ARRAY
+print()
+def sum_of_the_corresponding_number(numbers):
+    
+    result = [[],[],[]]
+  
+    
+    sum_up = [0,0,0]
+    for adder in numbers:
+        sum_up[0] += adder[0]
+        sum_up[1] += adder[1]
+        sum_up[2] += adder[2]
+        result = sum_up[0], sum_up[1],sum_up[2]
+    
+    print(numbers)
+    return result
+    
+result_number = sum_of_the_corresponding_number([[2,3,4,],[1,5,7],[4,6,8]])
+print ("the sum of the dimensional array = ",list(result_number))
+
+
+
+#SORTING NUMBER GREATER THAN TWO IN A TUPLE
+print()
+mixed_list = [(1,'A'),(4,'B'),(2,'C')]
+def sorting_out_index_greater_than_two(numbers):
+	return  numbers[0] > 2
+			
+result = list(filter(sorting_out_index_greater_than_two,mixed_list))
+print ("the index is = " ,result)
+	
+
+#ADDING MORE NUMBERS TO A ALREADY GIVEN SET OF TUPLE
+print()
+my_list = (30,20,40,50)
+print(my_list)
+my_list += (10,40) 
+
+my_new_list = ()
+
+my_new_list += my_list
+print("the new tuple =", my_new_list)
+
+
+
+#UNPACKING A SET OF TUPLE
+print()
+upacked_tuple_number = (10,20,30,40)
+print (upacked_tuple_number)
+number_1,number_2,number_3,number_4 = upacked_tuple_number
+
+upack_one = number_1
+upack_two = number_2
+
+upack_three = number_3 , number_4
+index_1,index_2 = upack_three
+
+print("the unpacked tuple = ",upack_one,upack_two,index_1,index_2 )
+
+
+
+# SORTING WORD THAT ARE MORE THAN FIVE 
+print ()
+animal_list = ['Cat','Elephant','Tiger','Lion']
+def length_of_list (words):
+    if len(words) > 5:
+        return words
+    
+new_animal_list = list(filter(length_of_list,animal_list))
+print(f"the word longer than 5 characters  = {new_animal_list}")
 
 

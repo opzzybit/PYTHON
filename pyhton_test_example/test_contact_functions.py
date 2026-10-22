@@ -44,4 +44,4 @@ class TestContactApp(TestCase):
 
         contact = create_contact(first_name, last_name, phone_number)
 
-        self.assertIsNone(contact)
+        self.assertEqual(contact)
